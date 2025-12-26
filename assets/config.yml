@@ -49,7 +49,13 @@ message:
   style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
   title: "Demo !"
   icon: "fa fa-grin"
-  content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirtz/homer'>github.com/bastienwirtz/homer</a>"
+  content: |
+    <div style="text-align: center; margin-top: 50px;">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" style="height: 80px; margin-bottom: 20px;">
+      <form action="https://www.google.com/search" method="get" target="_blank">
+        <input type="text" name="q" autofocus autocomplete="off" placeholder="Search Google..." style="width: 600px; max-width: 90%; padding: 15px 25px; border-radius: 30px; border: 1px solid #dfe1e5; box-shadow: 0 1px 6px rgba(32,33,36,0.28); font-size: 18px; outline: none;">
+      </form>
+    </div>
 
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
@@ -99,3 +105,5 @@ services:
         subtitle: "Dashboard icons"
         tag: "setup"
         url: "https://github.com/walkxcode/dashboard-icons"
+
+
