@@ -44,18 +44,20 @@ colors:
     link-hover: "#ffdd57"
 
 # Optional message
-<div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
-  <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" style="height: 80px; margin-bottom: 25px;">
-  <form action="https://www.google.com/search" method="get" target="_blank">
-    <input type="text" name="q" placeholder="在此输入搜索内容..." autofocus autocomplete="off" 
-      style="width: 100%; max-width: 600px; padding: 15px 25px; border-radius: 30px; 
-      border: 1px solid #5f6368; 
-      background-color: transparent; 
-      color: #ffffff; 
-      font-size: 18px; outline: none; 
-      box-shadow: none;">
-  </form>
-</div>
+message:
+  content: |
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" style="height: 80px; margin-bottom: 25px;">
+      <form action="https://www.google.com/search" method="get" target="_blank">
+        <input type="text" name="q" placeholder="在此输入搜索内容..." autofocus autocomplete="off" 
+          style="width: 100%; max-width: 600px; padding: 15px 25px; border-radius: 30px; 
+          border: 1px solid #5f6368 !important; 
+          background-color: #2b2b2b !important; 
+          color: #ffffff !important; 
+          font-size: 18px; outline: none; 
+          box-shadow: none !important;">
+      </form>
+    </div>
 
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
