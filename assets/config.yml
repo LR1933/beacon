@@ -49,42 +49,41 @@ message:
   content: |
     <div style="text-align: center; margin: 0; padding: 0;">
       <style>
-        .message { background-color: transparent !important; box-shadow: none !important; border: none !important; }
-        .message-body { background-color: transparent !important; border: none !important; padding: 0 !important; }
-
+        /* 1. Hide the default padding and force Header to be slim */
         #top-header { 
-          padding: 0 !important; 
-          background-color: #3273dc !important; 
+          background-color: #4285f4 !important; 
           min-height: 0 !important; 
         }
         #top-header .hero-body { 
-          padding: 0.5rem 1.5rem !important; 
+          display: none !important; 
         }
         #top-header .container { 
           min-height: 0 !important; 
+          padding: 8px 1.5rem !important; 
           display: flex !important; 
-          align-items: center !important; 
-          justify-content: flex-start !important; 
+          align-items: center !important;
         }
+        /* 2. Style the Logo and Title to fit the slim line */
         #top-header .title { 
           font-size: 1.1rem !important; 
           margin: 0 !important; 
-          line-height: 1 !important;
+          display: flex !important;
+          align-items: center !important;
         }
-        #top-header .subtitle { display: none !important; }
         #top-header img { 
           height: 24px !important; 
           margin-right: 10px !important; 
         }
-
-        header { margin-bottom: 0 !important; }
-
+        /* 3. Scale Google Search Area by 1.5x */
         .google-search-container {
           transform: scale(1.5);
           transform-origin: center top;
           margin-top: 80px;
           margin-bottom: 120px;
         }
+        /* 4. Remove Gray box background */
+        .message { background: transparent !important; box-shadow: none !important; border: none !important; }
+        .message-body { padding: 0 !important; }
       </style>
       
       <div class="google-search-container">
