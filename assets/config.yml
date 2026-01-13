@@ -46,23 +46,54 @@ colors:
 
 # Optional message
 message:
-  style: "is-borderless" 
   content: |
-    <div style="text-align: center; margin: 0; padding: 20px 0; background: transparent !important;">
+    <div style="text-align: center; margin: 0; padding: 20px 0;">
       <style>
-        .message { background-color: transparent !important; box-shadow: none !important; }
+        .message { background-color: transparent !important; box-shadow: none !important; border: none !important; }
         .message-body { background-color: transparent !important; border: none !important; padding: 0 !important; }
+
+        #top-header { 
+          padding: 0.5rem 0 !important; 
+          background-color: #3273dc !important; 
+        }
+        #top-header .container { 
+          min-height: auto !important; 
+          display: flex !important; 
+          align-items: center !important; 
+          justify-content: flex-start !important; 
+        }
+        #top-header .title { 
+          font-size: 1.25rem !important; 
+          margin-bottom: 0 !important; 
+        }
+        #top-header .subtitle { display: none !important; }
+        #top-header img { 
+          height: 32px !important; 
+          margin-right: 15px !important; 
+        }
+
+        header { margin-bottom: 0 !important; }
+
+        .google-search-container {
+          transform: scale(1.5);
+          transform-origin: center top;
+          margin-top: 60px;
+          margin-bottom: 100px;
+        }
       </style>
-      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" style="height: 80px; margin-bottom: 25px;">
-      <form action="https://www.google.com/search" method="get" target="_blank">
-        <input type="text" name="q" placeholder="Enter your search terms here..." autofocus autocomplete="off" 
-          style="width: 150%; max-width: 800px; padding: 15px 25px; border-radius: 100px; 
-          border: 1px solid var(--text-subtitle) !important; 
-          background: transparent !important; 
-          color: var(--text) !important; 
-          font-size: 18px; outline: none !important; 
-          box-shadow: none !important;">
-      </form>
+      
+      <div class="google-search-container">
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" style="height: 80px; margin-bottom: 25px;">
+        <form action="https://www.google.com/search" method="get" target="_blank">
+          <input type="text" name="q" placeholder="Search Google..." autofocus autocomplete="off" 
+            style="width: 100%; max-width: 1000px; padding: 12px 25px; border-radius: 30px; 
+            border: 1px solid var(--text-subtitle) !important; 
+            background-color: var(--background) !important; 
+            color: var(--text) !important; 
+            font-size: 18px; outline: none !important; 
+            box-shadow: none !important;">
+        </form>
+      </div>
     </div>
 
 # Optional navbar
