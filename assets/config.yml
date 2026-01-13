@@ -45,14 +45,19 @@ colors:
 
 # Optional message
 message:
+  style: "is-borderless" # 尝试使用 Homer 的无边框类名
   content: |
-    <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+    <div style="text-align: center; margin: 0; padding: 20px 0; background: transparent !important;">
+      <style>
+        .message { background-color: transparent !important; box-shadow: none !important; }
+        .message-body { background-color: transparent !important; border: none !important; padding: 0 !important; }
+      </style>
       <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" style="height: 80px; margin-bottom: 25px;">
       <form action="https://www.google.com/search" method="get" target="_blank">
         <input type="text" name="q" placeholder="在此输入搜索内容..." autofocus autocomplete="off" 
           style="width: 100%; max-width: 600px; padding: 15px 25px; border-radius: 30px; 
           border: 1px solid var(--text-subtitle) !important; 
-          background-color: var(--background) !important; 
+          background: transparent !important; 
           color: var(--text) !important; 
           font-size: 18px; outline: none !important; 
           box-shadow: none !important;">
