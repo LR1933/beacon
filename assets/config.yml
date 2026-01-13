@@ -121,14 +121,14 @@ links:
 # First level array represent a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 services:
-  - name: "Applications"
+  - name: "Favorites"
     icon: "fas fa-cloud"
     items:
-      - name: "Get started"
+      - name: "楽天証券"
         icon: "fa-solid fa-download"
-        subtitle: "Start using Homer in a few minutes"
-        tag: "setup"
-        url: "https://github.com/bastienwirtz/homer?tab=readme-ov-file#get-started"
+
+        tag: "finance"
+        url: "https://www.rakuten-sec.co.jp/"
       - name: "Configuration"
         icon: "fa-solid fa-sliders"
         subtitle: "Configuration options documentation"
