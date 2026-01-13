@@ -71,7 +71,7 @@ links:
   - name: "Github"
     icon: "fab fa-github"
     url: "https://github.com/LR1933?tab=repositories"
-    target: "_blank" # optional html a tag target attribute
+   # target: "_blank" # optional html a tag target attribute
   - name: "Wiki"
     icon: "fas fa-book"
     url: "https://www.wikipedia.org/"
