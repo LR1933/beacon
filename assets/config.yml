@@ -63,6 +63,7 @@ message:
           display: flex !important; 
           align-items: center !important;
         }
+
         /* 2. Style the Logo and Title to fit the slim line */
         #top-header .title { 
           font-size: 1.1rem !important; 
@@ -74,6 +75,7 @@ message:
           height: 24px !important; 
           margin-right: 10px !important; 
         }
+
         /* 3. Scale Google Search Area by 1.5x */
         .google-search-container {
           transform: scale(1.5);
@@ -81,6 +83,7 @@ message:
           margin-top: 80px;
           margin-bottom: 120px;
         }
+
         /* 4. Remove Gray box background */
         .message { background: transparent !important; box-shadow: none !important; border: none !important; }
         .message-body { padding: 0 !important; }
