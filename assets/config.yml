@@ -167,10 +167,8 @@ services:
       - name: "JAL"
         icon: "fa-solid fa-plane"
         tag: "travel"
-        url: "https://www.jal.co.jp/jp/ja/"
-
-services:        
- - name: "Researches"
+        url: "https://www.jal.co.jp/jp/ja/"     
+  - name: "Researches"
     icon: "fa-solid fa-book-medical"
     items:
       - name: "web of science"
