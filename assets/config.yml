@@ -19,7 +19,7 @@ theme: default
 colors:
   light:
     highlight-primary: "#ffffff"
-    highlight-secondary: "#e0e0e0"
+    highlight-secondary: "#ffffff"
     highlight-hover: "#eeeeee"
     background: "#ffffff"
     card-background: "#ffffff"
