@@ -4,7 +4,7 @@
 
 title: "Beacen"
 subtitle: "Portal website"
-logo: "venus_black.png"
+# logo: "venus_white.png"
 # icon: "fas fa-skull-crossbones" # Optional icon
 
 header: true
@@ -109,8 +109,15 @@ links:
     url: "https://github.com/LR1933?tab=repositories"
    # target: "_blank" # optional html a tag target attribute
   - name: "Power Automate"
-    icon: "fa-solid fa-chart-diagram"
+    icon: "fa-solid fa-folder-tree"
     url: "https://make.powerautomate.com/environments/Default-00bc734c-1046-44ff-bb99-f4b01806d062/home"
+  - name: "Google"
+    icon: "fa-brands fa-google"
+    url: "https://www.google.com/"
+  - name: "Google Gemini"
+    url: "https://gemini.google.com/app"
+
+   
   # this will link to a second homer page that will load config from additional-page.yml and keep default config values as in config.yml file
   # see url field and assets/additional-page.yml.dist used in this example:
   #- name: "another page!"
@@ -123,7 +130,7 @@ links:
 # https://fontawesome.com/search?ic=free-collection
 services:
   - name: "Favorites"
-    icon: "fas fa-cloud"
+    icon: "fa-solid fa-bookmark"
     items:
       - name: "楽天証券"
         icon: "fa-solid fa-arrow-trend-up"
@@ -161,12 +168,13 @@ services:
         icon: "fa-solid fa-plane"
         tag: "travel"
         url: "https://www.jal.co.jp/jp/ja/"
-
-
-
-
-
-
+ - name: "Researches"
+    icon: "fa-solid fa-book-medical"
+    items:
+      - name: "web of science"
+        icon: "fa-solid fa-book-atlas"
+        tag: "finance"
+        url: "https://www.webofscience.com/wos/woscc/smart-search"
 
 
 
