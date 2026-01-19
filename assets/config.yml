@@ -32,9 +32,9 @@ colors:
     link-hover: "#555555"
   dark:
     highlight-primary: "#000000"
-    highlight-secondary: "#090909"
+    highlight-secondary: "#101010"
     highlight-hover: "#454545"
-    background: "#131313"
+    background: "#202020"
     card-background: "#2b2b2b"
     text: "#eaeaea"
     text-header: "#ffffff"
