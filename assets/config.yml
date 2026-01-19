@@ -29,7 +29,7 @@ colors:
     text-subtitle: "#757575"
     card-shadow: rgba(0, 0, 0, 0.05)
     link: "#000000"
-    link-hover: "#555555"
+    link-hover: "#ff7875"
   dark:
     highlight-primary: "#000000"
     highlight-secondary: "#101010"
@@ -42,7 +42,7 @@ colors:
     text-subtitle: "#f5f5f5"
     card-shadow: rgba(0, 0, 0, 0.4)
     link: "#ffffff"
-    link-hover: "#ffdd57"
+    link-hover: "#ff7875"
 
 # Optional message
 message:
@@ -130,7 +130,6 @@ links:
 # https://fontawesome.com/search?ic=free-collection
 services:
   - name: "Favorites"
-    icon: "fa-solid fa-bookmark"
     items:
       - name: "楽天証券"
         icon: "fa-solid fa-arrow-trend-up"
@@ -169,7 +168,6 @@ services:
         tag: "travel"
         url: "https://www.jal.co.jp/jp/ja/"     
   - name: "Researches"
-    icon: "fa-solid fa-book-medical"
     items:
       - name: "web of science"
         icon: "fa-solid fa-book-atlas"
