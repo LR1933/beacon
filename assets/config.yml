@@ -116,7 +116,7 @@ links:
   #- name: "another page!"
   #  icon: "fas fa-file-alt"
   #  url: "#additional-page" 
-
+<i class=""></i>
 # Services
 # First level array represent a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
@@ -133,18 +133,48 @@ services:
         icon: "fa-solid fa-arrow-trend-up"
         tag: "finance"
         url: "https://www.sbisec.co.jp/ETGate/"
-      - name: "Theming"
-        icon: "fa-solid fa-palette"
-        subtitle: "Customize Homer appearance"
-        tag: "theming"
-        url: "https://github.com/bastienwirtz/homer/blob/main/docs/theming.md"
-      - name: "Smart cards"
-        icon: "fa-solid fa-palette"
-        subtitle: "Displays dynamic information or actions."
-        tag: "setup"
-        url: "https://github.com/bastienwirtz/homer/blob/main/docs/customservices.md"
-      - name: "Dashboard icons"
-        icon: "fa-solid fa-icons"
-        subtitle: "Dashboard icons"
-        tag: "setup"
-        url: "https://github.com/walkxcode/dashboard-icons"
+      - name: "三菱UFJ銀行"
+        icon: "fa-solid fa-building-columns"
+        tag: "finance"
+        url: "https://www.bk.mufg.jp/kojin/index.html?link_id=p_top_navi_kojin"
+      - name: "三菱UFJニコス"
+        icon: "fa-regular fa-credit-card"
+        tag: "finance"
+        url: "https://www2.cr.mufg.jp/newsplus/?cardBrand=0011&lid=news_mufg"
+      - name: "Visit Japan Web"
+        icon: "fa-solid fa-plane-arrival"
+        tag: "travel"
+        url: "https://www.vjw.digital.go.jp/main/#/vjwplo001"
+      - name: "KKRホテル"
+        icon: "fa-solid fa-hotel"
+        tag: "travel"
+        url: "https://reservation.kkr.or.jp/facilities?code=8811e040-febb-4a9b-ad7d-607588b05f66&checkin=2026%2F01%2F19&checkout=2026%2F01%2F20&type=rooms&rooms=%5B%7B%22adults%22%3A2%7D%5D"
+      - name: "ANA"
+        icon: "fa-solid fa-plane"
+        tag: "travel"
+        url: "https://www.ana.co.jp/ja/jp/"
+      - name: "ANA今週のとくたびマイル"
+        icon: "fa-solid fa-plane"
+        tag: "travel"
+        url: "https://www.ana.co.jp/ja/jp/promotion/amc/wa_t/?msockid=21daf5e3f3fb6bfa2340e375f2db6a6a"
+      - name: "JAL"
+        icon: "fa-solid fa-plane"
+        tag: "travel"
+        url: "https://www.jal.co.jp/jp/ja/"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
