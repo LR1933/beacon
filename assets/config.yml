@@ -91,7 +91,7 @@ message:
         <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" style="height: 80px; margin-bottom: 25px;">
         <form action="https://www.google.com/search" method="get" target="_blank">
           <input type="text" name="q" placeholder="Search Google..." autofocus autocomplete="off" 
-            style="width: 100%; max-width: 600px; padding: 12px 25px; border-radius: 100px; 
+            style="width: 100%; max-width: 900px; padding: 12px 25px; border-radius: 100px; 
             border: 1px solid var(--text-subtitle) !important; 
             background-color: var(--background) !important; 
             color: var(--text) !important; 
