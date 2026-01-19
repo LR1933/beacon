@@ -104,12 +104,12 @@ message:
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
 links:
-  - name: "Microsoft"
-    icon: "fa-brands fa-microsoft"
-    url: "https://account.microsoft.com/account"
   - name: "Google"
     icon: "fa-brands fa-google"
     url: "https://www.google.com/"
+  - name: "Microsoft"
+    icon: "fa-brands fa-microsoft"
+    url: "https://account.microsoft.com/account"
   - name: "Github"
     icon: "fab fa-github"
     url: "https://github.com/LR1933?tab=repositories"
