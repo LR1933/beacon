@@ -18,7 +18,7 @@ theme: default
 # overrrides can also be done using CSS vars 
 colors:
   light:
-    highlight-primary: "#000000"
+    highlight-primary: "#ffffff"
     highlight-secondary: "#e0e0e0"
     highlight-hover: "#eeeeee"
     background: "#ffffff"
