@@ -168,6 +168,8 @@ services:
         icon: "fa-solid fa-plane"
         tag: "travel"
         url: "https://www.jal.co.jp/jp/ja/"
+
+services:        
  - name: "Researches"
     icon: "fa-solid fa-book-medical"
     items:
