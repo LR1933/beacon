@@ -155,7 +155,7 @@ services:
         tag: "travel"
         url: "https://reservation.kkr.or.jp/facilities?code=8811e040-febb-4a9b-ad7d-607588b05f66&checkin=2026%2F01%2F19&checkout=2026%2F01%2F20&type=rooms&rooms=%5B%7B%22adults%22%3A2%7D%5D"
       - name: "Google travel"
-        icon: "fa-solid fa-plane-arrival"
+        icon: "fa-solid fa-suitcase"
         tag: "travel"
         url: "https://www.google.com/travel/?dest_src=ut&tcfs=UgRgAXgB&ved=0CAQQyJABahcKEwjQ66K0x7ySAxUAAAAAHQAAAAAQCQ&ictx=2"
   - name: "Finance"
