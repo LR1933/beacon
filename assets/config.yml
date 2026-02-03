@@ -172,7 +172,7 @@ services:
       - name: "Firstrade"
         icon: "fa-solid fa-arrow-trend-up"
         tag: "finance"
-        url: "https://www.google.com/travel/?dest_src=ut&tcfs=UgRgAXgB&ved=0CAQQyJABahcKEwjQ66K0x7ySAxUAAAAAHQAAAAAQCQ&ictx=2"
+        url: "https://invest.firstrade.com/cgi-bin/login"
       - name: "三菱UFJ銀行"
         icon: "fa-solid fa-building-columns"
         tag: "finance"
