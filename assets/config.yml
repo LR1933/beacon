@@ -173,7 +173,7 @@ services:
         icon: "fa-regular fa-credit-card"
         tag: "finance"
         url: "https://www2.cr.mufg.jp/newsplus/?cardBrand=0011&lid=news_mufg"
-  - name: "Researches"
+   - name: "Researches"
     items:
       - name: "web of science"
         icon: "fa-solid fa-book-atlas"
