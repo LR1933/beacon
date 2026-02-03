@@ -118,9 +118,8 @@ links:
     icon: "fa-solid fa-folder-tree"
     url: "https://make.powerautomate.com/environments/Default-00bc734c-1046-44ff-bb99-f4b01806d062/home"
   - name: "Google translate"
-    icon: "fa-solid fa-book-atlas"
+    icon: "fa-solid fa-language"
     url: "https://translate.google.co.jp/?sl=auto&tl=zh-CN&op=translate"
-
 
   # this will link to a second homer page that will load config from additional-page.yml and keep default config values as in config.yml file
   # see url field and assets/additional-page.yml.dist used in this example:
