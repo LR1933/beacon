@@ -179,12 +179,10 @@ services:
         icon: "fa-solid fa-book-atlas"
         tag: "research"
         url: "https://www.webofscience.com/wos/woscc/smart-search"
-    items:
       - name: "Scopus perview"
         icon: "fa-solid fa-book-atlas"
         tag: "research"
         url: "https://www.scopus.com/freelookup/form/author.uri"
-    items:
       - name: "Google scholar"
         icon: "fa-solid fa-book-atlas"
         tag: "research"
@@ -195,17 +193,14 @@ services:
         icon: "fa-solid fa-book-atlas"
         tag: "tools"
         url: "https://gemini.google.com/app"
-    items:
       - name: "Google translate"
         icon: "fa-solid fa-book-atlas"
         tag: "tools"
         url: "https://translate.google.co.jp/?sl=auto&tl=zh-CN&op=translate"
-    items:
       - name: "Google drive"
         icon: "fa-solid fa-book-atlas"
         tag: "tools"
         url: "https://drive.google.com/drive/u/0/home"
-    items:
       - name: "Onedrive"
         icon: "fa-solid fa-book-atlas"
         tag: "tools"
