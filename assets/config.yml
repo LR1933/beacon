@@ -129,7 +129,7 @@ links:
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 # https://fontawesome.com/search?ic=free-collection
 services:
-  - name: "Favorites"
+  - name: "Travel"
     items:
       - name: "ANA"
         icon: "fa-solid fa-plane"
@@ -151,7 +151,7 @@ services:
         icon: "fa-solid fa-hotel"
         tag: "travel"
         url: "https://reservation.kkr.or.jp/facilities?code=8811e040-febb-4a9b-ad7d-607588b05f66&checkin=2026%2F01%2F19&checkout=2026%2F01%2F20&type=rooms&rooms=%5B%7B%22adults%22%3A2%7D%5D"
-  - name: "Favorites"
+  - name: "Finance"
     items:
       - name: "楽天証券"
         icon: "fa-solid fa-arrow-trend-up"
@@ -175,7 +175,7 @@ services:
         url: "https://www2.cr.mufg.jp/newsplus/?cardBrand=0011&lid=news_mufg"
   - name: "Researches"
     items:
-      - name: "web of science"
+      - name: "Web of science"
         icon: "fa-solid fa-book-atlas"
         tag: "research"
         url: "https://www.webofscience.com/wos/woscc/smart-search"
