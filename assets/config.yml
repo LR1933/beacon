@@ -49,7 +49,7 @@ message:
   content: |
       <div style="text-align: center; margin: 0; padding: 0;">
         <style>
-          /* === Global & Desktop Styles === */
+          /* Global & Desktop Styles (Keep Default) */
           .message { background-color: transparent !important; box-shadow: none !important; border: none !important; }
           .message-body { background-color: transparent !important; border: none !important; padding: 0 !important; }
           #top-header { padding: 0 !important; background-color: #3273dc !important; min-height: 0 !important; }
@@ -59,7 +59,6 @@ message:
           #top-header .subtitle { display: none !important; }
           #top-header img { height: 24px !important; margin-right: 10px !important; }
           header { margin-bottom: 0 !important; }
-
           /* Desktop Search Scale */
           .google-search-container {
             transform: scale(1.5);
@@ -67,80 +66,65 @@ message:
             margin-top: 80px;
             margin-bottom: 120px;
           }
-
-          /* === Mobile Styles === */
+          /* ================= MOBILE EXTREME COMPACT MODE ================= */
           @media screen and (max-width: 768px) {
-            
-            /* 1. Mobile Search Fix (Logo 2x Larger) */
+            /* 1. Shrink Category Headers (Finance, Travel, etc.) */
+            .section .title.is-4 {
+              font-size: 14px !important;
+              margin-bottom: 6px !important;
+              margin-top: 10px !important;
+            }
+            /* 2. Mobile Search Fix */
             .google-search-container {
               transform: scale(1) !important;
-              margin-top: 10px !important;
-              margin-bottom: 20px !important;
-              padding: 0 10px !important;
+              margin-top: 5px !important;
+              margin-bottom: 10px !important;
+              padding: 0 5px !important;
             }
-            .google-search-container img { 
-              height: 100px !important;
-              margin-bottom: 15px !important; 
-            }
-            .google-search-container input { font-size: 16px !important; padding: 8px 15px !important; }
-
-            /* 2. Section Title Fix (Finance, Travel - Smaller Text) */
-            #main-section .title {
-              font-size: 16px !important; /* Reduced size */
-              margin-bottom: 0.5rem !important;
-              margin-top: 1rem !important;
-            }
-
+            .google-search-container img { height: 30px !important; margin-bottom: 5px !important; }
+            .google-search-container input { font-size: 14px !important; padding: 6px 12px !important; height: 36px !important; }
             /* 3. Force 2-Column Layout */
             #main-section .columns.is-multiline {
               display: flex !important;
               flex-wrap: wrap !important;
+              margin: 0 !important; /* Remove negative margins */
             }
             #main-section .column {
               width: 50% !important;
               flex: none !important;
-              padding: 4px !important;
+              padding: 2px !important; /* Ultra tight spacing */
             }
-
-            /* 4. Card Size & Alignment */
+            /* 4. Card Ultra Compact */
             .card-content {
-              padding: 8px 10px !important;
+              padding: 5px 6px !important;
               height: 100% !important;
-              display: flex !important;
-              align-items: center !important;
-            }
-            
-            /* Flex Container Fix */
+            }         
+            /* Flex Alignment */
             .media {
               display: flex !important;
               align-items: center !important;
-              width: 100% !important;
               margin-bottom: 0 !important;
-            }
-            
-            /* 5. Icon Adjustment */
+            }           
+            /* 5. Icons: Super Small */
             .media-left {
-              margin-right: 10px !important;
+              margin-right: 6px !important;
               flex-shrink: 0 !important;
               display: flex !important;
               align-items: center !important;
-              justify-content: center !important;
             }
-            .media-left .icon, .media-left .image, .media-left i {
-              width: 16px !important;
-              height: 16px !important;
-              font-size: 16px !important;
-              min-width: 16px !important;
+            .media-left .image, .media-left .icon {
+              width: 14px !important;  /* Tiny Size */
+              height: 14px !important;
+              font-size: 10px !important; /* For FontAwesome */
+              overflow: visible !important;
             }
-
-            /* Text Styling */
+            /* 6. Text: Super Small */
             .media-content {
               overflow: hidden !important;
-              flex-grow: 1 !important;
             }
             .media-content .title {
-              font-size: 13px !important;
-              line-height: 1.4 !important;
+              font-size: 11px !important; /* Smallest readable size */
+              line-height: 1.1 !important;
               white-space: nowrap !important;
               overflow: hidden !important;
               text-overflow: ellipsis !important;
@@ -163,6 +147,8 @@ message:
           </form>
         </div>
       </div>
+
+      
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
 links:
