@@ -47,59 +47,60 @@ colors:
 # Optional message
 message:
   content: |
-    <div style="text-align: center; margin: 0; padding: 0;">
-      <style>
-        .message { background-color: transparent !important; box-shadow: none !important; border: none !important; }
-        .message-body { background-color: transparent !important; border: none !important; padding: 0 !important; }
+      <div style="text-align: center; margin: 0; padding: 0;">
+        <style>
+          .message { background-color: transparent !important; box-shadow: none !important; border: none !important; }
+          .message-body { background-color: transparent !important; border: none !important; padding: 0 !important; }
 
-        #top-header { 
-          padding: 0 !important; 
-          background-color: #3273dc !important; 
-          min-height: 0 !important; 
-        }
-        #top-header .hero-body { 
-          padding: 0.5rem 1.5rem !important; 
-        }
-        #top-header .container { 
-          min-height: 0 !important; 
-          display: flex !important; 
-          align-items: center !important; 
-          justify-content: flex-start !important; 
-        }
-        #top-header .title { 
-          font-size: 1.1rem !important; 
-          margin: 0 !important; 
-          line-height: 1 !important;
-        }
-        #top-header .subtitle { display: none !important; }
-        #top-header img { 
-          height: 24px !important; 
-          margin-right: 10px !important; 
-        }
+          #top-header { padding: 0 !important; background-color: #3273dc !important; min-height: 0 !important; }
+          #top-header .hero-body { padding: 0.5rem 1.5rem !important; }
+          #top-header .container { min-height: 0 !important; display: flex !important; align-items: center !important; justify-content: flex-start !important; }
+          #top-header .title { font-size: 1.1rem !important; margin: 0 !important; line-height: 1 !important; }
+          #top-header .subtitle { display: none !important; }
+          #top-header img { height: 24px !important; margin-right: 10px !important; }
+          header { margin-bottom: 0 !important; }
 
-        header { margin-bottom: 0 !important; }
+          .google-search-container {
+            transform: scale(1.5);
+            transform-origin: center top;
+            margin-top: 80px;
+            margin-bottom: 120px;
+          }
 
-        .google-search-container {
-          transform: scale(1.5);
-          transform-origin: center top;
-          margin-top: 80px;
-          margin-bottom: 120px;
-        }
-      </style>
-      
-      <div class="google-search-container">
-        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" style="height: 80px; margin-bottom: 25px;">
-        <form action="https://www.google.com/search" method="get" target="_blank">
-          <input type="text" name="q" placeholder="Search Google..." autofocus autocomplete="off" 
-            style="width: 100%; max-width: 750px; padding: 12px 25px; border-radius: 100px; 
-            border: 1px solid var(--text-subtitle) !important; 
-            background-color: var(--background) !important; 
-            color: var(--text) !important; 
-            font-size: 18px; outline: none !important; 
-            box-shadow: none !important;">
-        </form>
+          @media screen and (max-width: 768px) {
+            .google-search-container {
+              transform: scale(1) !important;
+              margin-top: 20px !important;
+              margin-bottom: 30px !important;
+              padding-left: 15px;
+              padding-right: 15px;
+              width: 100%; 
+              box-sizing: border-box;
+            }
+            .google-search-container img {
+              height: 40px !important; 
+              margin-bottom: 15px !important;
+            }
+            .google-search-container input {
+              font-size: 16px !important; 
+              padding: 10px 20px !important;
+            }
+          }
+        </style>
+        
+        <div class="google-search-container">
+          <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" style="height: 80px; margin-bottom: 25px;">
+          <form action="https://www.google.com/search" method="get" target="_blank">
+            <input type="text" name="q" placeholder="Search Google..." autofocus autocomplete="off" 
+              style="width: 100%; max-width: 750px; padding: 12px 25px; border-radius: 100px; 
+              border: 1px solid var(--text-subtitle) !important; 
+              background-color: var(--background) !important; 
+              color: var(--text) !important; 
+              font-size: 18px; outline: none !important; 
+              box-shadow: none !important;">
+          </form>
+        </div>
       </div>
-    </div>
 
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
