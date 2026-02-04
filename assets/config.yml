@@ -49,9 +49,9 @@ message:
   content: |
       <div style="text-align: center; margin: 0; padding: 0;">
         <style>
+          /* Global & Desktop Styles */
           .message { background-color: transparent !important; box-shadow: none !important; border: none !important; }
           .message-body { background-color: transparent !important; border: none !important; padding: 0 !important; }
-
           #top-header { padding: 0 !important; background-color: #3273dc !important; min-height: 0 !important; }
           #top-header .hero-body { padding: 0.5rem 1.5rem !important; }
           #top-header .container { min-height: 0 !important; display: flex !important; align-items: center !important; justify-content: flex-start !important; }
@@ -60,6 +60,7 @@ message:
           #top-header img { height: 24px !important; margin-right: 10px !important; }
           header { margin-bottom: 0 !important; }
 
+          /* Desktop Search Scale */
           .google-search-container {
             transform: scale(1.5);
             transform-origin: center top;
@@ -67,51 +68,71 @@ message:
             margin-bottom: 120px;
           }
 
+          /* Mobile Styles */
           @media screen and (max-width: 768px) {
+            
+            /* 1. Mobile Search Fix */
             .google-search-container {
               transform: scale(1) !important;
-              margin-top: 20px !important;
-              margin-bottom: 30px !important;
-              padding-left: 15px;
-              padding-right: 15px;
-              width: 100%; 
-              box-sizing: border-box;
+              margin-top: 10px !important;
+              margin-bottom: 20px !important;
+              padding: 0 10px !important;
             }
-            .google-search-container img {
-              height: 40px !important; 
-              margin-bottom: 15px !important;
+            .google-search-container img { height: 35px !important; margin-bottom: 10px !important; }
+            .google-search-container input { font-size: 16px !important; padding: 8px 15px !important; }
+
+            /* 2. Force 2-Column Layout */
+            #main-section .columns.is-multiline {
+              display: flex !important;
+              flex-wrap: wrap !important;
             }
-            .google-search-container input {
-              font-size: 16px !important; 
-              padding: 10px 20px !important;
+            #main-section .column {
+              width: 50% !important;
+              flex: none !important;
+              padding: 4px !important;
             }
+
+            /* 3. Card Compact & Overlap Fix */
             .card-content {
-              padding: 8px 12px !important; 
+              padding: 8px !important;
+              height: 100% !important;
             }
-            .media-left {
-              margin-right: 8px !important; 
-            }
-            .media-left .icon {
-              font-size: 1.1rem !important; 
-              height: 24px !important;
-              width: 24px !important;
-            }
-            .media-left .image {
-              width: 24px !important;
-              height: 24px !important;
-            }
-            .media-content .title {
-              font-size: 14px !important;
-              line-height: 1.2 !important;
+            
+            /* Flex Alignment Fix */
+            .media {
+              display: flex !important;
+              align-items: center !important;
               margin-bottom: 0 !important;
             }
-            .media-content .subtitle {
-              display: none !important; 
+            
+            /* Icon Spacing */
+            .media-left {
+              margin-right: 8px !important;
+              flex-shrink: 0 !important;
+              display: flex !important;
+              align-items: center !important;
             }
-            .column {
-              padding: 4px !important; /* 让卡片排得更紧凑 */
+            .media-left .image, .media-left .icon {
+              width: 20px !important;
+              height: 20px !important;
+              font-size: 14px !important;
+              overflow: visible !important;
             }
+
+            /* Text Truncation */
+            .media-content {
+              overflow: hidden !important;
             }
+            .media-content .title {
+              font-size: 13px !important;
+              line-height: 1.2 !important;
+              white-space: nowrap !important;
+              overflow: hidden !important;
+              text-overflow: ellipsis !important;
+              margin-bottom: 0 !important;
+            }
+            .media-content .subtitle { display: none !important; }
+          }
         </style>
         
         <div class="google-search-container">
