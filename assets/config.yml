@@ -49,7 +49,7 @@ message:
   content: |
       <div style="text-align: center; margin: 0; padding: 0;">
         <style>
-          /* Global & Desktop Styles (Keep Default) */
+          /* 电脑端保持默认，不动它 */
           .message { background-color: transparent !important; box-shadow: none !important; border: none !important; }
           .message-body { background-color: transparent !important; border: none !important; padding: 0 !important; }
           #top-header { padding: 0 !important; background-color: #3273dc !important; min-height: 0 !important; }
@@ -60,7 +60,6 @@ message:
           #top-header img { height: 24px !important; margin-right: 10px !important; }
           header { margin-bottom: 0 !important; }
 
-          /* Desktop Search Scale */
           .google-search-container {
             transform: scale(1.5);
             transform-origin: center top;
@@ -68,96 +67,66 @@ message:
             margin-bottom: 120px;
           }
 
-          /* ================= MOBILE FIXED MODE ================= */
+          /* =========================================
+             手机端强制修正 (核弹模式)
+             ========================================= */
           @media screen and (max-width: 768px) {
             
-            /* 1. Category Headers */
-            .section .title.is-4 {
-              font-size: 14px !important;
-              margin-bottom: 8px !important;
-              margin-top: 10px !important;
-            }
+            /* 1. 标题缩小 */
+            .section .title.is-4 { font-size: 14px !important; margin: 10px 0 5px 0 !important; }
 
-            /* 2. Search Box */
+            /* 2. 搜索框缩小 */
             .google-search-container {
               transform: scale(1) !important;
-              margin-top: 5px !important;
-              margin-bottom: 15px !important;
+              margin: 10px 0 15px 0 !important;
               padding: 0 5px !important;
             }
             .google-search-container img { height: 90px !important; margin-bottom: 5px !important; }
-            .google-search-container input { font-size: 14px !important; padding: 6px 12px !important; height: 36px !important; }
+            .google-search-container input { font-size: 14px !important; height: 36px !important; padding: 5px 10px !important; }
 
-            /* 3. 2-Column Layout */
-            #main-section .columns.is-multiline {
-              display: flex !important;
-              flex-wrap: wrap !important;
-              margin: 0 !important;
-            }
-            #main-section .column {
-              width: 50% !important;
-              flex: none !important;
-              padding: 3px !important;
-            }
+            /* 3. 强制双列布局 */
+            #main-section .columns.is-multiline { display: flex !important; flex-wrap: wrap !important; margin: 0 !important; }
+            #main-section .column { width: 50% !important; flex: none !important; padding: 2px !important; }
 
-            /* 4. Card Box */
-            .card-content {
-              padding: 6px !important;
-              height: 100% !important;
-              overflow: hidden !important; /* Safety clip */
-            }
-            
-            .media {
-              display: flex !important;
-              align-items: center !important;
-              margin-bottom: 0 !important;
-            }
-            
-            /* 5. ICON FIX (CRITICAL) */
+            /* 4. 卡片容器 */
+            .card-content { padding: 5px !important; height: 100% !important; overflow: hidden !important; }
+            .media { display: flex !important; align-items: center !important; margin: 0 !important; }
+
+            /* ==================================================
+               关键修改：图标强制管制
+               ================================================== */
             .media-left {
-              margin-right: 6px !important;
-              flex-shrink: 0 !important;
-              display: flex !important;
-              align-items: center !important;
-              justify-content: center !important;
-              width: 20px !important; /* Fixed width container */
-            }
-            
-            /* Target wrapper */
-            .media-left .icon {
-              width: 16px !important;
-              height: 16px !important;
+              margin-right: 5px !important;
+              width: 16px !important;       /* 锁死宽度：只有16px宽 */
+              min-width: 16px !important;   /* 防止被挤压 */
+              height: 16px !important;      /* 锁死高度 */
+              overflow: hidden !important;  /* 【绝招】超出的部分直接切掉，不准显示 */
               display: flex !important;
               align-items: center !important;
               justify-content: center !important;
             }
 
-            /* Target the ACTUAL icon symbol (FontAwesome i tag) */
-            .media-left .icon i, .media-left .icon svg {
-              font-size: 12px !important; /* Force text size down */
-              line-height: 1 !important;
-              width: auto !important;
+            /* 强制缩小图标内部的所有东西 (包括 svg, i, span) */
+            .media-left .icon, 
+            .media-left i, 
+            .media-left svg, 
+            .media-left span {
+              font-size: 12px !important;   /* 强制 12号字体 */
+              width: 100% !important;
               height: auto !important;
-            }
-            
-            /* Target Image icons (if any) */
-            .media-left .image {
-              width: 16px !important;
-              height: 16px !important;
+              line-height: 1 !important;
+              display: block !important;
+              text-align: center !important;
             }
 
-            /* 6. Text Fix */
-            .media-content {
-              overflow: hidden !important;
-              flex: 1 !important; /* Take remaining space */
-            }
+            /* 5. 文字部分 */
+            .media-content { flex: 1 !important; overflow: hidden !important; min-width: 0 !important; }
             .media-content .title {
-              font-size: 12px !important;
-              line-height: 1.2 !important;
+              font-size: 11px !important;   /* 极小字体 */
               white-space: nowrap !important;
               overflow: hidden !important;
               text-overflow: ellipsis !important;
-              margin-bottom: 0 !important;
+              margin: 0 !important;
             }
             .media-content .subtitle { display: none !important; }
           }
