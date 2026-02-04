@@ -49,7 +49,7 @@ message:
   content: |
       <div style="text-align: center; margin: 0; padding: 0;">
         <style>
-          /* Global & Desktop Styles */
+          /* === Global & Desktop Styles === */
           .message { background-color: transparent !important; box-shadow: none !important; border: none !important; }
           .message-body { background-color: transparent !important; border: none !important; padding: 0 !important; }
           #top-header { padding: 0 !important; background-color: #3273dc !important; min-height: 0 !important; }
@@ -68,7 +68,7 @@ message:
             margin-bottom: 120px;
           }
 
-          /* Mobile Styles */
+          /* === Mobile Styles === */
           @media screen and (max-width: 768px) {
             
             /* 1. Mobile Search Fix */
@@ -92,40 +92,47 @@ message:
               padding: 4px !important;
             }
 
-            /* 3. Card Compact & Overlap Fix */
+            /* 3. Card Size & Alignment */
             .card-content {
-              padding: 8px !important;
+              padding: 8px 10px !important;
               height: 100% !important;
+              display: flex !important;
+              align-items: center !important;
             }
             
-            /* Flex Alignment Fix */
+            /* Flex Container Fix */
             .media {
               display: flex !important;
               align-items: center !important;
+              width: 100% !important;
               margin-bottom: 0 !important;
             }
             
-            /* Icon Spacing */
+            /* 4. Icon Adjustment (Smaller & Spaced) */
             .media-left {
-              margin-right: 8px !important;
+              margin-right: 10px !important; /* Increase gap */
               flex-shrink: 0 !important;
               display: flex !important;
               align-items: center !important;
+              justify-content: center !important;
             }
-            .media-left .image, .media-left .icon {
-              width: 20px !important;
-              height: 20px !important;
-              font-size: 14px !important;
-              overflow: visible !important;
+            
+            /* Target Icon Size Strictly */
+            .media-left .icon, .media-left .image, .media-left i {
+              width: 16px !important;
+              height: 16px !important;
+              font-size: 16px !important;
+              min-width: 16px !important; /* Prevent shrinking */
             }
 
-            /* Text Truncation */
+            /* Text Styling */
             .media-content {
               overflow: hidden !important;
+              flex-grow: 1 !important;
             }
             .media-content .title {
               font-size: 13px !important;
-              line-height: 1.2 !important;
+              line-height: 1.4 !important;
               white-space: nowrap !important;
               overflow: hidden !important;
               text-overflow: ellipsis !important;
