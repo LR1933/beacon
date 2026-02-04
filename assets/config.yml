@@ -131,9 +131,6 @@ message:
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
 links:
-  - name: "Google"
-    icon: "fa-brands fa-google"
-    url: "https://www.google.com/"
   - name: "Microsoft"
     icon: "fa-brands fa-microsoft"
     url: "https://account.microsoft.com/account"
