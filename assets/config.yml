@@ -71,17 +71,27 @@ message:
           /* === Mobile Styles === */
           @media screen and (max-width: 768px) {
             
-            /* 1. Mobile Search Fix */
+            /* 1. Mobile Search Fix (Logo 2x Larger) */
             .google-search-container {
               transform: scale(1) !important;
               margin-top: 10px !important;
               margin-bottom: 20px !important;
               padding: 0 10px !important;
             }
-            .google-search-container img { height: 35px !important; margin-bottom: 10px !important; }
+            .google-search-container img { 
+              height: 200px !important;
+              margin-bottom: 15px !important; 
+            }
             .google-search-container input { font-size: 16px !important; padding: 8px 15px !important; }
 
-            /* 2. Force 2-Column Layout */
+            /* 2. Section Title Fix (Finance, Travel - Smaller Text) */
+            #main-section .title {
+              font-size: 16px !important; /* Reduced size */
+              margin-bottom: 0.5rem !important;
+              margin-top: 1rem !important;
+            }
+
+            /* 3. Force 2-Column Layout */
             #main-section .columns.is-multiline {
               display: flex !important;
               flex-wrap: wrap !important;
@@ -92,7 +102,7 @@ message:
               padding: 4px !important;
             }
 
-            /* 3. Card Size & Alignment */
+            /* 4. Card Size & Alignment */
             .card-content {
               padding: 8px 10px !important;
               height: 100% !important;
@@ -108,21 +118,19 @@ message:
               margin-bottom: 0 !important;
             }
             
-            /* 4. Icon Adjustment (Smaller & Spaced) */
+            /* 5. Icon Adjustment */
             .media-left {
-              margin-right: 10px !important; /* Increase gap */
+              margin-right: 10px !important;
               flex-shrink: 0 !important;
               display: flex !important;
               align-items: center !important;
               justify-content: center !important;
             }
-            
-            /* Target Icon Size Strictly */
             .media-left .icon, .media-left .image, .media-left i {
               width: 16px !important;
               height: 16px !important;
               font-size: 16px !important;
-              min-width: 16px !important; /* Prevent shrinking */
+              min-width: 16px !important;
             }
 
             /* Text Styling */
@@ -155,7 +163,6 @@ message:
           </form>
         </div>
       </div>
-
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
 links:
