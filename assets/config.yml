@@ -59,6 +59,7 @@ message:
           #top-header .subtitle { display: none !important; }
           #top-header img { height: 24px !important; margin-right: 10px !important; }
           header { margin-bottom: 0 !important; }
+
           /* Desktop Search Scale */
           .google-search-container {
             transform: scale(1.5);
@@ -66,65 +67,93 @@ message:
             margin-top: 80px;
             margin-bottom: 120px;
           }
-          /* ================= MOBILE EXTREME COMPACT MODE ================= */
+
+          /* ================= MOBILE FIXED MODE ================= */
           @media screen and (max-width: 768px) {
-            /* 1. Shrink Category Headers (Finance, Travel, etc.) */
+            
+            /* 1. Category Headers */
             .section .title.is-4 {
               font-size: 14px !important;
-              margin-bottom: 6px !important;
+              margin-bottom: 8px !important;
               margin-top: 10px !important;
             }
-            /* 2. Mobile Search Fix */
+
+            /* 2. Search Box */
             .google-search-container {
               transform: scale(1) !important;
               margin-top: 5px !important;
-              margin-bottom: 10px !important;
+              margin-bottom: 15px !important;
               padding: 0 5px !important;
             }
-            .google-search-container img { height: 100px !important; margin-bottom: 5px !important; }
+            .google-search-container img { height: 90px !important; margin-bottom: 5px !important; }
             .google-search-container input { font-size: 14px !important; padding: 6px 12px !important; height: 36px !important; }
-            /* 3. Force 2-Column Layout */
+
+            /* 3. 2-Column Layout */
             #main-section .columns.is-multiline {
               display: flex !important;
               flex-wrap: wrap !important;
-              margin: 0 !important; /* Remove negative margins */
+              margin: 0 !important;
             }
             #main-section .column {
               width: 50% !important;
               flex: none !important;
-              padding: 2px !important; /* Ultra tight spacing */
+              padding: 3px !important;
             }
-            /* 4. Card Ultra Compact */
+
+            /* 4. Card Box */
             .card-content {
-              padding: 5px 6px !important;
+              padding: 6px !important;
               height: 100% !important;
-            }         
-            /* Flex Alignment */
+              overflow: hidden !important; /* Safety clip */
+            }
+            
             .media {
               display: flex !important;
               align-items: center !important;
               margin-bottom: 0 !important;
-            }           
-            /* 5. Icons: Super Small */
+            }
+            
+            /* 5. ICON FIX (CRITICAL) */
             .media-left {
               margin-right: 6px !important;
               flex-shrink: 0 !important;
               display: flex !important;
               align-items: center !important;
+              justify-content: center !important;
+              width: 20px !important; /* Fixed width container */
             }
-            .media-left .image, .media-left .icon {
-              width: 1px !important;  /* Tiny Size */
-              height: 1px !important;
-              font-size: 1px !important; /* For FontAwesome */
-              overflow: visible !important;
+            
+            /* Target wrapper */
+            .media-left .icon {
+              width: 16px !important;
+              height: 16px !important;
+              display: flex !important;
+              align-items: center !important;
+              justify-content: center !important;
             }
-            /* 6. Text: Super Small */
+
+            /* Target the ACTUAL icon symbol (FontAwesome i tag) */
+            .media-left .icon i, .media-left .icon svg {
+              font-size: 12px !important; /* Force text size down */
+              line-height: 1 !important;
+              width: auto !important;
+              height: auto !important;
+            }
+            
+            /* Target Image icons (if any) */
+            .media-left .image {
+              width: 16px !important;
+              height: 16px !important;
+            }
+
+            /* 6. Text Fix */
             .media-content {
               overflow: hidden !important;
+              flex: 1 !important; /* Take remaining space */
             }
             .media-content .title {
-              font-size: 11px !important; /* Smallest readable size */
-              line-height: 1.1 !important;
+              font-size: 12px !important;
+              line-height: 1.2 !important;
               white-space: nowrap !important;
               overflow: hidden !important;
               text-overflow: ellipsis !important;
