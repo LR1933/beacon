@@ -81,7 +81,7 @@ message:
               margin-bottom: 10px !important;
               padding: 0 5px !important;
             }
-            .google-search-container img { height: 30px !important; margin-bottom: 5px !important; }
+            .google-search-container img { height: 100px !important; margin-bottom: 5px !important; }
             .google-search-container input { font-size: 14px !important; padding: 6px 12px !important; height: 36px !important; }
             /* 3. Force 2-Column Layout */
             #main-section .columns.is-multiline {
