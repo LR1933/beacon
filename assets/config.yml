@@ -113,9 +113,9 @@ message:
               align-items: center !important;
             }
             .media-left .image, .media-left .icon {
-              width: 14px !important;  /* Tiny Size */
-              height: 14px !important;
-              font-size: 5px !important; /* For FontAwesome */
+              width: 1px !important;  /* Tiny Size */
+              height: 1px !important;
+              font-size: 1px !important; /* For FontAwesome */
               overflow: visible !important;
             }
             /* 6. Text: Super Small */
