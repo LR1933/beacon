@@ -232,10 +232,10 @@ services:
         url: "https://www.google.com/travel/?dest_src=ut&tcfs=UgRgAXgB&ved=0CAQQyJABahcKEwjQ66K0x7ySAxUAAAAAHQAAAAAQCQ&ictx=2"
   - name: "Tools"
     items:
-      - name: "Google gemini"
+      - name: "My portal"
         icon: "fa-solid fa-book-atlas"
         tag: "tools"
-        url: "https://gemini.google.com/app"
+        url: "https://myna.go.jp/"
       - name: "Google drive"
         icon: "fa-solid fa-book-atlas"
         tag: "tools"
@@ -244,7 +244,7 @@ services:
         icon: "fa-solid fa-book-atlas"
         tag: "tools"
         url: "https://www.google.com/maps"
-      - name: "Tahoo navi"
+      - name: "Yahoo navi"
         icon: "fa-solid fa-book-atlas"
         tag: "tools"
         url: "https://transit.yahoo.co.jp/"
@@ -274,8 +274,24 @@ services:
         icon: "fa-solid fa-book-atlas"
         tag: "research"
         url: "https://discourse.datamethods.org/"
-
-
+  - name: "LLM"
+    items:
+      - name: "Google gemini"
+        icon: "fa-solid fa-book-atlas"
+        tag: "tools"
+        url: "https://gemini.google.com/app"
+      - name: "ChatGPT"
+        icon: "fa-solid fa-book-atlas"
+        tag: "research"
+        url: "https://chatgpt.com/"
+      - name: "Grok"
+        icon: "fa-solid fa-book-atlas"
+        tag: "research"
+        url: "https://grok.com/"
+      - name: "Claude"
+        icon: "fa-solid fa-book-atlas"
+        tag: "research"
+        url: "https://claude.ai/new"
 
 
 
