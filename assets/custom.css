@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* --- 1. 基础重置：确保背景层全屏，容器层 80% --- */
+/* 1. 强制所有背景层（父容器）占满 100% 宽度，并消除干扰内边距 */
 #app .header, 
 #app .navbar, 
 #app .search-bar-container, 
@@ -9,41 +9,39 @@
     max-width: 100% !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
+    display: block !important;
 }
 
-/* --- 2. 统一所有核心容器宽度为 80% 并居中 --- */
+/* 2. 定义统一的 80% 宽度“安全区”，并强制水平居中 */
 #app .header .container,
 #app .navbar .container,
 #app .search-bar,
 #main-section .container {
     width: 80% !important;
     max-width: 80% !important;
-    margin: 0 auto !important; /* 强制水平居中 */
-    display: flex !important;
-    padding: 0 !important; /* 清除默认内边距 */
+    min-width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important; /* 消除内部边距，确保边缘对齐 */
 }
 
-/* --- 3. 解决“红色部分（Beacon）”不动的问题 --- */
-/* Homer 的 Header 内部通常有额外的对齐设置，需要强制左对齐 */
+/* 3. 针对“红色部分 (Beacon)”的内部对齐逻辑 */
 #app .header .container {
-    justify-content: flex-start !important; /* 确保内容从 80% 区域的左侧开始 */
+    display: flex !important;
+    justify-content: flex-start !important; /* 确保 Logo 贴着 80% 区域的左边缘 */
+    align-items: center !important;
 }
 
-/* 强制覆盖 Homer 内置的 Title 或 Brand 的对齐方式 */
-.header-brand, .header-title, .header-content {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    justify-content: flex-start !important;
-    text-align: left !important;
-}
-
-/* --- 4. 恢复下方图标矩阵的布局 --- */
+/* 4. 恢复下方图标矩阵的分布逻辑，防止全部左偏 */
 #main-section .container {
-    justify-content: space-between !important; /* 让 Finance/Travel 等列分布开 */
+    display: flex !important;
+    justify-content: space-between !important; /* 保持图标列均匀分布 */
     flex-wrap: wrap !important;
 }
 
-/* 修正搜索框宽度 */
+/* 5. 修正搜索框在容器内的表现 */
 #app .search-bar {
-    width: 100% !important; /* 在 80% 的容器里占满 100% */
+    display: flex !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
 }
