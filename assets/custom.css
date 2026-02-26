@@ -52,7 +52,7 @@
 /* 5. 主内容卡片区居中 */
 #main-section > .container,
 #app #main-section .container {
-    width: 80% !important;
-    max-width: 80% !important;
+    width: 60% !important;
+    max-width: 60% !important;
 
 }
