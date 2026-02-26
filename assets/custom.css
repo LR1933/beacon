@@ -50,10 +50,8 @@
 }
 
 /* 5. 主内容卡片区居中 */
-#app #main-section .container,
-#app section.section > .container {
-    max-width: none !important;  /* ← 禁用 Bulma 断点 */
-    width: 100% !important;
+
+#app #main-section .columns.is-multiline {
     padding-left: 10% !important;
     padding-right: 10% !important;
 }
