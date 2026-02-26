@@ -1,40 +1,31 @@
 @charset "UTF-8";
-/* --- 1. 彻底清除框架自带的左右间距（防止左偏的关键） --- */
-#app, .navbar, .section, .container, .search-bar-container {
+
+/* ============================================
+   核心：定义统一的内容宽度变量
+   ============================================ */
+:root {
+    --content-width: 80%;
+}
+
+/* ============================================
+   1. 清除框架默认的水平 padding/margin，
+      但保留宽度为 100%（占满屏幕背景色）
+   ============================================ */
+.navbar,
+.section,
+#app > .section {
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    max-width: none !important; /* 禁用 Bulma 的断点限制 */
-    width: 100% !important;
 }
 
-/* --- 2. 重新定义一个“80% 居中区” --- */
-/* 我们不直接改父容器，而是强制让里面的内容块 80% 且居中 */
-#app .navbar .container,
-#app .search-bar,
-#app #main-section .container {
-    width: 80% !important;
-    max-width: 80% !important;
-    min-width: 80% !important;
-    margin: 0 auto !important; /* 真正的水平居中 */
+/* ============================================
+   2. Navbar 内容区域居中（logo + 链接同步对齐）
+      Homer 结构: .navbar > .navbar-brand + .navbar-menu
+      用 wrapper 思路：给 navbar 内部加一个虚拟居中区
+   ============================================ */
+.navbar {
     display: flex !important;
+    justify-content: center !important;  /* 水平居中整个 navbar 内容 */
 }
 
-/* --- 3. 解决“Beacon”对齐问题 --- */
-/* 因为容器已经 80% 居中，我们只需让 Beacon 贴着容器左边 */
-.navbar-brand, .navbar-item {
-    padding-left: 0 !important;
-    justify-content: flex-start !important;
-}
-
-/* --- 4. 恢复下方图标的间距（防止挤在一起） --- */
-#main-section .container {
-    justify-content: space-between !important; /* 让 Finance, Travel 等列拉开距离 */
-    flex-wrap: wrap !important;
-}
-
-/* 5. 搜索框内边距微调 */
-.search-bar {
-    padding: 10px 0 !important;
-}
+/* navbar-brand（logo/
