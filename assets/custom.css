@@ -1,47 +1,41 @@
 @charset "UTF-8";
-
-/* 1. 强制所有背景层（父容器）占满 100% 宽度，并消除干扰内边距 */
-#app .header, 
-#app .navbar, 
-#app .search-bar-container, 
+/* 1. 强制所有横向区域（导航、搜索、主区）占满全屏宽度 */
+#app nav, 
+#app section, 
+.navbar, 
+.search-bar-container, 
 #main-section {
     width: 100% !important;
     max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important; /* 这是关键：父级强制让子级居中 */
     padding-left: 0 !important;
     padding-right: 0 !important;
-    display: block !important;
 }
 
-/* 2. 定义统一的 80% 宽度“安全区”，并强制水平居中 */
-#app .header .container,
-#app .navbar .container,
-#app .search-bar,
-#main-section .container {
+/* 2. 统一内部容器为 80% 宽度，不再使用 margin auto，而是配合父级的 justify-content */
+.container {
     width: 80% !important;
     max-width: 80% !important;
     min-width: 80% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding: 0 !important; /* 消除内部边距，确保边缘对齐 */
+    margin: 0 !important; /* 靠父级居中，自己不需要 margin */
+    padding: 0 !important;
 }
 
-/* 3. 针对“红色部分 (Beacon)”的内部对齐逻辑 */
-#app .header .container {
-    display: flex !important;
-    justify-content: flex-start !important; /* 确保 Logo 贴着 80% 区域的左边缘 */
-    align-items: center !important;
+/* 3. 解决“Beacon”在 80% 区域内靠左的问题 */
+.navbar-brand {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
 }
 
-/* 4. 恢复下方图标矩阵的分布逻辑，防止全部左偏 */
+/* 4. 保持下方图标矩阵的间距分布 */
 #main-section .container {
-    display: flex !important;
-    justify-content: space-between !important; /* 保持图标列均匀分布 */
+    justify-content: space-between !important;
     flex-wrap: wrap !important;
+    display: flex !important;
 }
 
-/* 5. 修正搜索框在容器内的表现 */
-#app .search-bar {
-    display: flex !important;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
+/* 5. 搜索框宽度修正 */
+.search-bar {
+    width: 100% !important;
 }
