@@ -7,18 +7,24 @@ body #app .card.green {
   color: #00ff00;
 }
 
-#app .navbar > .container {
-    max-width: 70% !important;
-    width: 70% !important;
+#app .navbar .container,
+#app .navbar-menu.is-active .container {
+    max-width: 80% !important;
+    width: 80% !important;
 }
 
-#main-section > .container {
-    max-width: 70% !important;
-    width: 70% !important;
+#app .header .container {
+    max-width: 80% !important;
+    width: 80% !important;
 }
 
-.search-bar {
-    max-width: 1000px !important; 
-    margin-left: auto;
-    margin-right: auto;
+#app .search-bar-container .container,
+#app .search-bar {
+    max-width: 80% !important;
+    width: 80% !important;
+}
+
+#main-section .container {
+    max-width: 80% !important;
+    width: 80% !important;
 }
