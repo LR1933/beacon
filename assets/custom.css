@@ -6,3 +6,9 @@ body #app .card.green {
   background-color: #006600;
   color: #00ff00;
 }
+
+
+#main-section .container {
+    max-width: 80% !important; /* 或者设为 none 彻底取消限制 */
+    width: 80%;
+}
