@@ -1,39 +1,36 @@
 @charset "UTF-8";
+/* 1. 顶部 Header (Beacon 区域) 强制对齐 */
+#app .header .container {
+    max-width: 80% !important;
+    width: 80% !important;
+    margin: 0 auto !important;
+    padding-left: 0 !important; /* 消除可能的内边距偏移 */
+    display: flex !important;
+    justify-content: flex-start !important; /* 确保 Logo 靠左对齐 */
+}
 
-/* 1. 强制统一所有内容容器的宽度和居中逻辑 */
-#app .header .container,
-#app .navbar .container,
+/* 2. 中间 Navbar (图标区域) 强制对齐 */
+#app .navbar .container {
+    max-width: 80% !important;
+    width: 80% !important;
+    margin: 0 auto !important;
+    padding-left: 0 !important;
+}
+
+/* 3. 下方主内容区 (搜索框和图标矩阵) 恢复布局并对齐 */
 #app .search-bar-container .container,
 #app .search-bar,
 #main-section .container {
-    width: 80% !important;
     max-width: 80% !important;
-    min-width: 80% !important; /* 增加最小宽度限制防止被压缩 */
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 0 !important;  /* 关键：消除框架自带的左侧偏移 */
-    padding-right: 0 !important; /* 关键：消除框架自带的右侧偏移 */
+    width: 80% !important;
+    margin: 0 auto !important;
+    /* 注意：这里不要设置 justify-content: flex-start，
+       让它保留原有的布局（通常是 space-between 或 centered） */
 }
 
-/* 2. 确保 Header 内部的 Flex 布局不产生额外位移 */
-#app .header .container {
+/* 4. 特殊修复：防止图标列缩成一团 */
+#main-section .container {
     display: flex !important;
-    justify-content: flex-start !important; /* 让 Logo 从这 80% 区域的起始点开始 */
-    align-items: center !important;
-}
-
-/* 3. 确保背景层是全屏的，不要限制背景的宽度 */
-#app .header,
-#app .navbar,
-#app .search-bar-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    left: 0 !important;
-}
-
-/* 4. 如果 Logo 还是太靠左，可能是内部的 brand 类有 margin */
-#app .header .header-content,
-#app .navbar-brand {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
+    justify-content: space-between !important; /* 恢复图标列之间的间距 */
+    flex-wrap: wrap; 
 }
