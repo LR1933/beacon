@@ -1,36 +1,49 @@
 @charset "UTF-8";
-/* 1. 顶部 Header (Beacon 区域) 强制对齐 */
-#app .header .container {
-    max-width: 80% !important;
-    width: 80% !important;
-    margin: 0 auto !important;
-    padding-left: 0 !important; /* 消除可能的内边距偏移 */
-    display: flex !important;
-    justify-content: flex-start !important; /* 确保 Logo 靠左对齐 */
-}
 
-/* 2. 中间 Navbar (图标区域) 强制对齐 */
-#app .navbar .container {
-    max-width: 80% !important;
-    width: 80% !important;
-    margin: 0 auto !important;
+/* --- 1. 基础重置：确保背景层全屏，容器层 80% --- */
+#app .header, 
+#app .navbar, 
+#app .search-bar-container, 
+#main-section {
+    width: 100% !important;
+    max-width: 100% !important;
     padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
-/* 3. 下方主内容区 (搜索框和图标矩阵) 恢复布局并对齐 */
-#app .search-bar-container .container,
+/* --- 2. 统一所有核心容器宽度为 80% 并居中 --- */
+#app .header .container,
+#app .navbar .container,
 #app .search-bar,
 #main-section .container {
-    max-width: 80% !important;
     width: 80% !important;
-    margin: 0 auto !important;
-    /* 注意：这里不要设置 justify-content: flex-start，
-       让它保留原有的布局（通常是 space-between 或 centered） */
+    max-width: 80% !important;
+    margin: 0 auto !important; /* 强制水平居中 */
+    display: flex !important;
+    padding: 0 !important; /* 清除默认内边距 */
 }
 
-/* 4. 特殊修复：防止图标列缩成一团 */
+/* --- 3. 解决“红色部分（Beacon）”不动的问题 --- */
+/* Homer 的 Header 内部通常有额外的对齐设置，需要强制左对齐 */
+#app .header .container {
+    justify-content: flex-start !important; /* 确保内容从 80% 区域的左侧开始 */
+}
+
+/* 强制覆盖 Homer 内置的 Title 或 Brand 的对齐方式 */
+.header-brand, .header-title, .header-content {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+}
+
+/* --- 4. 恢复下方图标矩阵的布局 --- */
 #main-section .container {
-    display: flex !important;
-    justify-content: space-between !important; /* 恢复图标列之间的间距 */
-    flex-wrap: wrap; 
+    justify-content: space-between !important; /* 让 Finance/Travel 等列分布开 */
+    flex-wrap: wrap !important;
+}
+
+/* 修正搜索框宽度 */
+#app .search-bar {
+    width: 100% !important; /* 在 80% 的容器里占满 100% */
 }
