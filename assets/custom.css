@@ -9,8 +9,8 @@ body #app .card.green {
 
 #app .navbar .container,
 #app .navbar-menu.is-active .container {
-    max-width: 60% !important;
-    width: 60% !important;
+    max-width: 80% !important;
+    width: 80% !important;
 }
 
 #app .header, 
