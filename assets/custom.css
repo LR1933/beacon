@@ -1,31 +1,60 @@
 @charset "UTF-8";
 
-/* ============================================
-   核心：定义统一的内容宽度变量
-   ============================================ */
-:root {
-    --content-width: 80%;
+/* ============================================================
+   目标布局：
+   - 第一行：Beacon logo 居中（hero/header 区域）
+   - 第二行：navbar 链接居中对齐（同 80% 宽度基准）
+   - 第三行以下：Google 搜索 + 卡片，统一在 80% 居中区
+   ============================================================ */
+
+/* 1. 顶部 Hero Header（logo + 标题）居中
+      Homer 在 config.yml 有 logo 时会渲染 .hero > .hero-body > .container */
+#app .hero .hero-body {
+    display: flex !important;
+    justify-content: center !important;
+    padding: 1.5rem 0 !important;
 }
 
-/* ============================================
-   1. 清除框架默认的水平 padding/margin，
-      但保留宽度为 100%（占满屏幕背景色）
-   ============================================ */
-.navbar,
-.section,
-#app > .section {
+#app .hero .hero-body .container {
+    width: 80% !important;
+    max-width: 80% !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+/* 2. Navbar（链接行：Microsoft, OneDrive 等）与 logo 行对齐
+      Homer navbar 结构: .navbar > .navbar-brand + .navbar-menu
+      Bulma 默认 .navbar 是全宽 flex，brand 在最左
+      用 padding 模拟 80% 居中区：(100% - 80%) / 2 = 10% */
+#app .navbar {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+}
+
+/* 3. 搜索区（message 区域）透明化 */
+#app .message,
+#app .message-body {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* 4. Section 容器居中（Google搜索所在区域） */
+#app section.section > .container {
+    width: 80% !important;
+    max-width: 80% !important;
+    margin: 0 auto !important;
+}
+
+/* 5. 主内容卡片区居中 */
+#main-section > .container,
+#app #main-section .container {
+    width: 80% !important;
+    max-width: 80% !important;
+    margin: 0 auto !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
-
-/* ============================================
-   2. Navbar 内容区域居中（logo + 链接同步对齐）
-      Homer 结构: .navbar > .navbar-brand + .navbar-menu
-      用 wrapper 思路：给 navbar 内部加一个虚拟居中区
-   ============================================ */
-.navbar {
-    display: flex !important;
-    justify-content: center !important;  /* 水平居中整个 navbar 内容 */
-}
-
-/* navbar-brand（logo/
