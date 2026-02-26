@@ -201,7 +201,7 @@ services:
         icon: "fa-solid fa-plane"
         tag: "travel"
         url: "https://www.ana.co.jp/ja/jp/"
-      - name: "ANA travel mile"
+      - name: "ANA mile travel"
         icon: "fa-solid fa-plane"
         tag: "travel"
         url: "https://www.ana.co.jp/ja/jp/promotion/amc/wa_t/?msockid=21daf5e3f3fb6bfa2340e375f2db6a6a"
