@@ -9,23 +9,24 @@ body #app .card.green {
 
 #app .navbar .container,
 #app .navbar-menu.is-active .container {
-    max-width: 80% !important;
-    width: 80% !important;
+    max-width: 60% !important;
+    width: 60% !important;
 }
 
+#app header .container,
 #app .header .container {
-    max-width: 80% !important;
-    width: 80% !important;
+    max-width: 60% !important;
+    width: 60% !important;
 }
 
 #app .search-bar-container .container,
 #app .search-bar {
-    max-width: 80% !important;
-    width: 80% !important;
+    max-width: 60% !important;
+    width: 60% !important;
 }
 
 #main-section .container {
     max-width: 80% !important;
     width: 80% !important;
 }
-body { border: 5px solid red !important; }
+
