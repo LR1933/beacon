@@ -28,3 +28,4 @@ body #app .card.green {
     max-width: 80% !important;
     width: 80% !important;
 }
+body { border: 5px solid red !important; }
