@@ -53,7 +53,6 @@ message:
   content: |
       <div style="text-align: center; margin: 0; padding: 0;">
         <style>
-          /* 电脑端保持默认，不动它 */
           .message { background-color: transparent !important; box-shadow: none !important; border: none !important; }
           .message-body { background-color: transparent !important; border: none !important; padding: 0 !important; }
           #top-header { padding: 0 !important; background-color: #3273dc !important; min-height: 0 !important; }
@@ -71,15 +70,10 @@ message:
             margin-bottom: 120px;
           }
 
-          /* =========================================
-             手机端强制修正 (核弹模式)
-             ========================================= */
           @media screen and (max-width: 768px) {
             
-            /* 1. 标题缩小 */
             .section .title.is-4 { font-size: 14px !important; margin: 10px 0 5px 0 !important; }
 
-            /* 2. 搜索框缩小 */
             .google-search-container {
               transform: scale(1) !important;
               margin: 10px 0 15px 0 !important;
@@ -88,34 +82,28 @@ message:
             .google-search-container img { height: 90px !important; margin-bottom: 5px !important; }
             .google-search-container input { font-size: 14px !important; height: 36px !important; padding: 5px 10px !important; }
 
-            /* 3. 强制双列布局 */
             #main-section .columns.is-multiline { display: flex !important; flex-wrap: wrap !important; margin: 0 !important; }
             #main-section .column { width: 50% !important; flex: none !important; padding: 2px !important; }
 
-            /* 4. 卡片容器 */
             .card-content { padding: 5px !important; height: 100% !important; overflow: hidden !important; }
             .media { display: flex !important; align-items: center !important; margin: 0 !important; }
 
-            /* ==================================================
-               关键修改：图标强制管制
-               ================================================== */
             .media-left {
               margin-right: 5px !important;
-              width: 16px !important;       /* 锁死宽度：只有16px宽 */
-              min-width: 16px !important;   /* 防止被挤压 */
-              height: 16px !important;      /* 锁死高度 */
-              overflow: hidden !important;  /* 【绝招】超出的部分直接切掉，不准显示 */
+              width: 16px !important;      
+              min-width: 16px !important; 
+              height: 16px !important;    
+              overflow: hidden !important; 
               display: flex !important;
               align-items: center !important;
               justify-content: center !important;
             }
 
-            /* 强制缩小图标内部的所有东西 (包括 svg, i, span) */
             .media-left .icon, 
             .media-left i, 
             .media-left svg, 
             .media-left span {
-              font-size: 12px !important;   /* 强制 12号字体 */
+              font-size: 12px !important;   
               width: 100% !important;
               height: auto !important;
               line-height: 1 !important;
@@ -123,10 +111,9 @@ message:
               text-align: center !important;
             }
 
-            /* 5. 文字部分 */
             .media-content { flex: 1 !important; overflow: hidden !important; min-width: 0 !important; }
             .media-content .title {
-              font-size: 11px !important;   /* 极小字体 */
+              font-size: 11px !important; 
               white-space: nowrap !important;
               overflow: hidden !important;
               text-overflow: ellipsis !important;
@@ -140,7 +127,7 @@ message:
           <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" style="height: 80px; margin-bottom: 25px;">
           <form action="https://www.google.com/search" method="get" target="_blank">
             <input type="text" name="q" placeholder="Search Google..." autofocus autocomplete="off" 
-              style="width: 100%; max-width: 750px; padding: 12px 25px; border-radius: 100px; 
+              style="width: 100%; max-width: 1000px; padding: 12px 25px; border-radius: 100px; 
               border: 1px solid var(--text-subtitle) !important; 
               background-color: var(--background) !important; 
               color: var(--text) !important; 
