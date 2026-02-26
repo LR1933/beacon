@@ -23,18 +23,18 @@ body #app .card.green {
 }
 #app .header .container {
     display: flex !important;
-    justify-content: flex-start !important; /* 让 Logo 靠左 */
+    justify-content: flex-start !important;
     align-items: center;
 }
 
 #app .search-bar-container .container,
 #app .search-bar {
-    max-width: 60% !important;
-    width: 60% !important;
+    max-width: 80% !important;
+    width: 80% !important;
 }
 
 #main-section .container {
-    max-width: 60% !important;
-    width: 60% !important;
+    max-width: 80% !important;
+    width: 80% !important;
 }
 
