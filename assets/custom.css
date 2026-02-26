@@ -7,8 +7,18 @@ body #app .card.green {
   color: #00ff00;
 }
 
+#app .navbar > .container {
+    max-width: 80% !important;
+    width: 80% !important;
+}
 
-#main-section .container {
-    max-width: 80% !important; /* 或者设为 none 彻底取消限制 */
-    width: 80%;
+#main-section > .container {
+    max-width: 80% !important;
+    width: 80% !important;
+}
+
+.search-bar {
+    max-width: 1000px !important; /* 默认通常比较窄，可以手动调大 */
+    margin-left: auto;
+    margin-right: auto;
 }
