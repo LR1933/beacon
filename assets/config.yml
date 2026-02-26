@@ -6,8 +6,10 @@ title: "Beacen"
 subtitle: "Portal website"
 logo: "logo.png"
 # icon: "fas fa-skull-crossbones" # Optional icon
+
 stylesheet:
   - "assets/custom.css"
+columns: "5"
   
 header: true
 footer: false
