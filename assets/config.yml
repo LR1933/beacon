@@ -279,6 +279,10 @@ services:
         icon: "fa-solid fa-book-atlas"
         tag: "tools"
         url: "https://gemini.google.com/app"
+      - name: "Google NotebookLM"
+        icon: "https://notebooklm.google.com/"
+        tag: "tools"
+        url: "https://gemini.google.com/app"
       - name: "ChatGPT"
         icon: "fa-solid fa-book-atlas"
         tag: "research"
@@ -291,6 +295,13 @@ services:
         icon: "fa-solid fa-book-atlas"
         tag: "research"
         url: "https://claude.ai/new"
+      - name: "Perplexity"
+        icon: "fa-solid fa-book-atlas"
+        tag: "research"
+        url: "https://www.perplexity.ai/"
+
+
+        
 
 
 
