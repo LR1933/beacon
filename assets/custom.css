@@ -6,35 +6,3 @@
     padding: 1.5rem 0 !important;
 }
 
-#app .hero .hero-body .container {
-    width: 50% !important;
-    max-width: 50% !important;
-    margin: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-}
-
-
-#app .navbar {
-    padding-left: 20% !important;
-    padding-right: 20% !important;
-}
-
-#app .message,
-#app .message-body {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-}
-
-#app section.section > .container {
-    width: 50% !important;
-    max-width: 50% !important;
-    margin: 0 auto !important;
-}
-#app #main-section .columns.is-multiline {
-    padding-left: 20% !important;
-    padding-right: 20% !important;
-}
