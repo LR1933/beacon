@@ -3,6 +3,6 @@
 #app .hero .hero-body {
     display: flex !important;
     justify-content: center !important;
-    padding: 1.5rem 0 !important;
+    padding: 2rem 0 !important;
 }
 
